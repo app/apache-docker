@@ -1,3 +1,13 @@
+Quick start
+
+This folder has to be put in root of you project filesystem tree.  
+Folder 'siteroot' in the root of you project filesystem tree have to be root of web site.  
+Just run ./apache-create-n-run-container.sh and open http://localhost/ in browser.
+
+
+
+
+
 Automated build of Apache with Docker
 ===========
 
