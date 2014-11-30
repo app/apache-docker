@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y wget curl locales
 
 # Configure timezone and locale
-RUN echo "Europe/Stockholm" > /etc/timezone && \
+RUN echo "Europe/Moscow" > /etc/timezone && \
 	dpkg-reconfigure -f noninteractive tzdata
 RUN export LANGUAGE=en_US.UTF-8 && \
 	export LANG=en_US.UTF-8 && \
@@ -24,8 +24,8 @@ RUN echo "deb http://packages.dotdeb.org wheezy-php55 all" >> /etc/apt/sources.l
 RUN apt-get update; apt-get install -y php5-cli php5 php5-mcrypt php5-curl php5-pgsql php5-mysql
  
 # Let's set the default timezone in both cli and apache configs
-RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Stockholm/g' /etc/php5/cli/php.ini
-RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Stockholm/g' /etc/php5/apache2/php.ini
+RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Moscow/g' /etc/php5/cli/php.ini
+RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Moscow/g' /etc/php5/apache2/php.ini
 
 # Setup Composer
 RUN curl -sS https://getcomposer.org/installer | php && \
