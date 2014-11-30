@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# Start apache
-/usr/sbin/apache2 -D FOREGROUND
+# Start apache if not started
+ps aux |grep -v grep|grep apache2 || /usr/sbin/apache2 -D FOREGROUND
