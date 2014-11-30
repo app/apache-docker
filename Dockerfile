@@ -1,5 +1,5 @@
 FROM        ubuntu
-MAINTAINER  Love Nyberg "love.nyberg@lovemusic.se"
+MAINTAINER  Andrey Paskal "apaskal@gmail.com" 
  
 # Update apt sources
 #RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
